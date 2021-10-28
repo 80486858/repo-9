@@ -45,6 +45,10 @@ if [ ! "$SKIP_PIP_INSTALL" ]; then
     PIP_STATUS="${PIPESTATUS[0]}"
     set -e
 
+    if [[ -f "$BUILD_DIR/postinstall" ]]; then
+        source "$BUILD_DIR/postinstall"
+    fi
+
     show-warnings
 
     if [[ ! $PIP_STATUS -eq 0 ]]; then
