@@ -1674,7 +1674,7 @@ jobs:
         }}
     - continue-on-error: true
       name: Store benchmark result
-      uses: benchmark-action/github-action-benchmark@v1.17.0
+      uses: benchmark-action/github-action-benchmark@v1.20.3
       with:
         auto-push: false
         benchmark-data-dir-path: benchmark/trend
