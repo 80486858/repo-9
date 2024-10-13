@@ -267,7 +267,7 @@ jobs:
       run: cd testing-framework/cmd/aotutil && make build
     - continue-on-error: true
       name: Cache aotutil
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: aotutil_${{ github.run_id }}
         path: testing-framework/cmd/aotutil/aotutil
@@ -1067,7 +1067,7 @@ jobs:
         repository: ${{ env.TESTING_FRAMEWORK_REPO }}
     - continue-on-error: true
       name: Restore aoutil
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: aotutil_${{ github.run_id }}
         path: testing-framework/cmd/aotutil/aotutil

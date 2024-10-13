@@ -306,7 +306,7 @@ jobs:
         \ bash tools/workflow/docker-version-compare.sh\n"
     - continue-on-error: true
       name: Cache packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: ${{ env.PACKAGE_CACHE_KEY }}
         path: ${{ env.PACKAGING_ROOT }}
@@ -563,7 +563,7 @@ jobs:
     - continue-on-error: true
       id: release-ssm
       name: Cache if success
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: release-ssm-${{ github.run_id }}
         path: VERSION
@@ -1098,14 +1098,14 @@ jobs:
     - continue-on-error: true
       id: release-to-s3
       name: Cache if success
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: release-to-s3-${{ github.run_id }}
         path: VERSION
     - continue-on-error: true
       if: steps.release-to-s3.outputs.cache-hit != 'true'
       name: Restore cached packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: ${{ env.PACKAGE_CACHE_KEY }}
         path: ${{ env.PACKAGING_ROOT }}
@@ -1378,7 +1378,7 @@ jobs:
     - continue-on-error: true
       id: release-version-image
       name: Cache if success
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: release-version-image-${{ github.run_id }}
         path: VERSION

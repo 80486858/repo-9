@@ -267,7 +267,7 @@ jobs:
       id: cached_binaries
       if: ${{ needs.changes.outputs.changed == 'true' }}
       name: Cache binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -1338,7 +1338,7 @@ jobs:
     - continue-on-error: true
       if: ${{ needs.changes.outputs.changed == 'true' }}
       name: Restore cached binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -1606,7 +1606,7 @@ jobs:
     - continue-on-error: true
       if: ${{ needs.changes.outputs.changed == 'true' }}
       name: restore cached binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -1903,7 +1903,7 @@ jobs:
     - continue-on-error: true
       if: ${{ needs.changes.outputs.changed == 'true' }}
       name: restore cached binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build

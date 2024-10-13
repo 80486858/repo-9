@@ -307,7 +307,7 @@ jobs:
     - continue-on-error: true
       id: cached_binaries
       name: Cache binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -597,7 +597,7 @@ jobs:
       run: cd testing-framework/cmd/aotutil && make build
     - continue-on-error: true
       name: Cache aotutil
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: aotutil_${{ hashFiles('testing-framework/cmd/aotutil/*.go') }}_${{ hashFiles('testing-framework/cmd/aotutil/go.sum')
           }}
@@ -862,7 +862,7 @@ jobs:
     - continue-on-error: true
       id: cache_packages
       name: restore cached packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_packages_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
@@ -1401,21 +1401,21 @@ jobs:
     - continue-on-error: true
       id: cached_packages
       name: Cache the packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_packages_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
     - continue-on-error: true
       if: steps.cached_packages.outputs.cache-hit != 'true'
       name: Restore cached rpms
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_rpms_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
     - continue-on-error: true
       if: steps.cached_packages.outputs.cache-hit != 'true'
       name: Restore cached debs
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_debs_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
@@ -1429,7 +1429,7 @@ jobs:
     - continue-on-error: true
       if: steps.cached_packages.outputs.cache-hit != 'true'
       name: Restore cached ssm
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_ssm_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}/ssm
@@ -1700,7 +1700,7 @@ jobs:
     - continue-on-error: true
       id: e2etest-release
       name: Cache if success
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: e2etest-release-${{ github.run_id }}
         path: 'VERSION
@@ -1708,14 +1708,14 @@ jobs:
           '
     - continue-on-error: true
       name: restore cached rpms
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_packages_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
     - continue-on-error: true
       if: steps.e2etest-release.outputs.cache-hit != 'true'
       name: Restore cached binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -2308,14 +2308,14 @@ jobs:
     - continue-on-error: true
       id: cached_debs
       name: Cache Debs
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_debs_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
     - continue-on-error: true
       if: steps.cached_debs.outputs.cache-hit != 'true'
       name: restore cached binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -2621,14 +2621,14 @@ jobs:
     - continue-on-error: true
       id: cached_rpms
       name: Cache rpms
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_rpms_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
     - continue-on-error: true
       if: steps.cached_rpms.outputs.cache-hit != 'true'
       name: restore cached binaries
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_binaries_${{ github.run_id }}
         path: build
@@ -2946,21 +2946,21 @@ jobs:
     - continue-on-error: true
       id: cached_ssm
       name: Cache SSM files
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_ssm_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}/ssm
     - continue-on-error: true
       if: steps.cached_ssm.outputs.cache-hit != 'true'
       name: Restore cached rpms
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_rpms_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
     - continue-on-error: true
       if: steps.cached_ssm.outputs.cache-hit != 'true'
       name: Restore cached debs
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_debs_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
@@ -3501,7 +3501,7 @@ jobs:
         role-to-assume: ${{ secrets.COLLECTOR_ASSUMABLE_ROLE_ARN }}
     - continue-on-error: true
       name: restore cached packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: cached_packages_${{ github.run_id }}
         path: ${{ env.PACKAGING_ROOT }}
@@ -3827,7 +3827,7 @@ jobs:
       run: echo "ttldate=$(date -u -d "+7 days" +%s)" >> $GITHUB_OUTPUT
     - continue-on-error: true
       name: Restore aotutil
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         key: aotutil_${{ hashFiles('testing-framework/cmd/aotutil/*.go') }}_${{ hashFiles('testing-framework/cmd/aotutil/go.sum')
           }}
