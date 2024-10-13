@@ -767,7 +767,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_RELEASE_USERNAME }}
     - continue-on-error: true
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-east-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
@@ -1039,7 +1039,7 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
@@ -1334,7 +1334,7 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
@@ -1635,42 +1635,42 @@ jobs:
     - continue-on-error: true
       if: matrix.type == 'global'
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'hkg'
       name: Configure AWS Credentials for HKG
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: ap-east-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_HKG_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'bah'
       name: Configure AWS Credentials for BAH
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: me-south-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_BAH_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'cpt'
       name: Configure AWS Credentials for CPT
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: af-south-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_CPT_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'mxp'
       name: Configure AWS Credentials for MXP
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: eu-south-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_MXP_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'cn'
       name: Configure AWS Credentials for CN
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-access-key-id: ${{ secrets.RELEASE_CN_KEY_ID }}
         aws-region: cn-north-1
@@ -1975,42 +1975,42 @@ jobs:
     - continue-on-error: true
       if: matrix.type == 'global'
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'hkg'
       name: Configure AWS Credentials for HKG
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: ap-east-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_HKG_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'bah'
       name: Configure AWS Credentials for BAH
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: me-south-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_BAH_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'cpt'
       name: Configure AWS Credentials for CPT
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: af-south-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_CPT_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'mxp'
       name: Configure AWS Credentials for MXP
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: eu-south-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_MXP_ROLE_ARN }}
     - continue-on-error: true
       if: matrix.type == 'cn'
       name: Configure AWS Credentials for CN
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-access-key-id: ${{ secrets.RELEASE_CN_KEY_ID }}
         aws-region: cn-north-1

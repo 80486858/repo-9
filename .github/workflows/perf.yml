@@ -1047,7 +1047,7 @@ jobs:
         fetch-depth: 0
     - continue-on-error: true
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_ASSUMABLE_ROLE_ARN }}
@@ -1343,7 +1343,7 @@ jobs:
       uses: actions/checkout@v3
     - continue-on-error: true
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-duration-seconds: 10800

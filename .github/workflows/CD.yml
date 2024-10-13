@@ -270,7 +270,7 @@ jobs:
         fi\n"
     - continue-on-error: true
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_ASSUMABLE_ROLE_ARN }}
@@ -1112,7 +1112,7 @@ jobs:
     - continue-on-error: true
       if: steps.release-to-s3.outputs.cache-hit != 'true'
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-west-2
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
@@ -1385,7 +1385,7 @@ jobs:
     - continue-on-error: true
       if: steps.release-version-image.outputs.cache-hit != 'true'
       name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2.2.0
+      uses: aws-actions/configure-aws-credentials@v4.0.2
       with:
         aws-region: us-east-1
         role-to-assume: ${{ secrets.COLLECTOR_PROD_RELEASE_ROLE_ARN }}
