@@ -245,7 +245,7 @@ jobs:
 
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
-      uses: spowelljr/hide-minikube-bot-comments@de281e1bb630835cb5e6f155198e2527223c0dd8
+      uses: spowelljr/hide-minikube-bot-comments@6ef419ab40a17cf0bdc1f98f2442bf19b72d911d
       with:
         token: ${{ secrets.MINIKUBE_BOT_PAT }}
     - name: after
