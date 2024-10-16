@@ -89,8 +89,9 @@ GEM
       faraday (~> 2.0)
     fastimage (2.3.0)
     ffi (1.16.3)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.3.0)
+      temple (>= 0.8.2)
+      thor
       tilt
     haml_lint (0.59.0)
       haml (>= 5.0)
@@ -239,7 +240,7 @@ PLATFORMS
 DEPENDENCIES
   builder
   faraday-retry (~> 2.2)
-  haml (~> 5.2.2)
+  haml (~> 6.3.0)
   haml_lint (~> 0.59)
   irb
   kramdown
