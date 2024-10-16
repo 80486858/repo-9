@@ -1080,7 +1080,7 @@ jobs:
     - continue-on-error: true
       if: github.event_name == 'pull_request'
       name: golangci-lint
-      uses: golangci/golangci-lint-action@v3
+      uses: golangci/golangci-lint-action@v6
       with:
         args: --verbose --timeout 5m
         version: v1.52.2
