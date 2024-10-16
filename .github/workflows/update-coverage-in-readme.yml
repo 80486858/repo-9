@@ -325,7 +325,7 @@ jobs:
     - continue-on-error: true
       if: github.ref == 'refs/heads/main'
       name: Create the badge
-      uses: schneegans/dynamic-badges-action@v1.6.0
+      uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.JEST_COVERAGE_COMMENT }}
         color: ${{ steps.coverageComment.outputs.color }}
