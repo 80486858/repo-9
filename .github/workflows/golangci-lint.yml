@@ -258,7 +258,7 @@ jobs:
         go-version: 1.22.x
     - continue-on-error: true
       name: Lint
-      uses: golangci/golangci-lint-action@a4f60bb28d35aeee14e6880718e0c85ff1882e64
+      uses: golangci/golangci-lint-action@971e284b6050e8a5849b72094c50ab08da042db8
       with:
         version: v1.55.2
     - name: after
