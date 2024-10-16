@@ -248,7 +248,7 @@ jobs:
       name: Checkout code
       uses: actions/checkout@v4
     - continue-on-error: true
-      uses: cachix/install-nix-action@V27
+      uses: cachix/install-nix-action@v30
       with:
         extra_nix_config: 'experimental-features = nix-command flakes
 
