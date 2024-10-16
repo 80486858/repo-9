@@ -252,7 +252,7 @@ jobs:
       env:
         cache-name: ci
       name: Restore cargo cache
-      uses: actions/cache@v2.1.6
+      uses: actions/cache@v4.1.1
       with:
         key: ${{ matrix.os }}-${{ env.cache-name }}-${{ matrix.rust }}-${{ hashFiles('Cargo.lock')
           }}
@@ -811,7 +811,7 @@ jobs:
       env:
         cache-name: ci
       name: Restore cargo cache
-      uses: actions/cache@v2.1.6
+      uses: actions/cache@v4.1.1
       with:
         key: ${{ matrix.os }}-${{ env.cache-name }}-${{ matrix.rust }}-${{ hashFiles('Cargo.lock')
           }}
