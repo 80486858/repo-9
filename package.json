@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@nextcloud/webpack-vue-config": "^5.1.0",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^6.0.1"
   },
   "engines": {
     "node": "^14.0.0",
