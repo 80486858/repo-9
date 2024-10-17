@@ -252,7 +252,7 @@ jobs:
     - continue-on-error: true
       uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
     - continue-on-error: true
-      uses: anchore/scan-action@v3
+      uses: anchore/scan-action@v5
       with:
         fail-build: true
         path: .
