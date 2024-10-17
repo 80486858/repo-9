@@ -256,7 +256,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         version: 3.x
     - continue-on-error: true
-      uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3
+      uses: docker/setup-qemu-action@49b3bc8e6bdd4a60e6116a5414239cba5943d3cf
     - continue-on-error: true
       uses: docker/setup-buildx-action@2b51285047da1547ffb1b2203d8be4c0af6b1f20
     - continue-on-error: true
@@ -593,7 +593,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         version: 3.x
     - continue-on-error: true
-      uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3
+      uses: docker/setup-qemu-action@49b3bc8e6bdd4a60e6116a5414239cba5943d3cf
     - continue-on-error: true
       uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319
       with:
