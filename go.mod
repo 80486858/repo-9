@@ -14,7 +14,7 @@ require (
 	github.com/caarlos0/go-shellwords v1.0.12
 	github.com/caarlos0/go-version v0.1.1
 	github.com/caarlos0/log v0.4.4
-	github.com/charmbracelet/keygen v0.5.0
+	github.com/charmbracelet/keygen v0.5.1
 	github.com/charmbracelet/lipgloss v0.10.0
 	github.com/charmbracelet/x/exp/ordered v0.0.0-20231010190216-1cb11efc897d
 	github.com/chrismellard/docker-credential-acr-env v0.0.0-20230304212654-82a0ddb27589
@@ -44,11 +44,11 @@ require (
 	github.com/ulikunitz/xz v0.5.11
 	github.com/xanzy/go-gitlab v0.100.0
 	gocloud.dev v0.37.0
-	golang.org/x/crypto v0.21.0
+	golang.org/x/crypto v0.26.0
 	golang.org/x/oauth2 v0.18.0
-	golang.org/x/sync v0.6.0
-	golang.org/x/text v0.14.0
-	golang.org/x/tools v0.19.0
+	golang.org/x/sync v0.8.0
+	golang.org/x/text v0.17.0
+	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d
 	gopkg.in/mail.v2 v2.3.1
 	gopkg.in/yaml.v3 v3.0.1
 )
@@ -258,10 +258,10 @@ require (
 	go.opencensus.io v0.24.0 // indirect
 	go.uber.org/automaxprocs v1.5.3
 	golang.org/x/exp v0.0.0-20231206192017-f3f8817b8deb
-	golang.org/x/mod v0.16.0 // indirect
-	golang.org/x/net v0.22.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
-	golang.org/x/term v0.18.0 // indirect
+	golang.org/x/mod v0.17.0 // indirect
+	golang.org/x/net v0.25.0 // indirect
+	golang.org/x/sys v0.23.0 // indirect
+	golang.org/x/term v0.23.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028 // indirect
 	google.golang.org/api v0.169.0 // indirect
