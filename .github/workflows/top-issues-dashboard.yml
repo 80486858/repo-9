@@ -249,7 +249,7 @@ jobs:
       env:
         github_token: ${{ secrets.GITHUB_TOKEN }}
       name: Run top issues action
-      uses: rickstaa/top-issues-action@eefb38db8e2fa93f349623f5fc987daf7816ffbd
+      uses: rickstaa/top-issues-action@7e8dda5d5ae3087670f9094b9724a9a091fc3ba1
       with:
         dashboard: true
         dashboard_show_total_reactions: true
