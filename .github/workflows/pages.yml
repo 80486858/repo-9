@@ -258,7 +258,7 @@ jobs:
       uses: actions/configure-pages@v3
     - continue-on-error: true
       name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./ashar-site/
     - continue-on-error: true
