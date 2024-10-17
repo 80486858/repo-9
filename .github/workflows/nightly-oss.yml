@@ -277,13 +277,13 @@ jobs:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
     - continue-on-error: true
       name: dockerhub-login
-      uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20
+      uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
       with:
         password: ${{ secrets.DOCKER_PASSWORD }}
         username: ${{ secrets.DOCKER_USERNAME }}
     - continue-on-error: true
       name: ghcr-login
-      uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20
+      uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
       with:
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: ghcr.io
