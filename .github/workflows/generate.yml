@@ -277,7 +277,7 @@ jobs:
     - continue-on-error: true
       run: task schema:validate
     - continue-on-error: true
-      uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
+      uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
       with:
         branch: main
         commit_author: actions-user <actions@github.com>
